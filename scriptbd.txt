@@ -1,0 +1,90 @@
+create database redsocialfase1;
+use redsocialfase1;
+
+
+Create table USUARIO(
+id_usuario int primary key,
+nombre_usuario varchar(75),
+correo varchar(100),
+fecha_nac date,
+contraseña varchar(75),
+nickname varchar(75),
+karma int
+
+);
+
+Create table PUBLICACION(
+id_publicacion int primary key,
+usuario int,
+texto_publicacion text,
+fecha_publicacion date,
+id_aplicacion int
+
+);
+
+Create table COMENTARIO(
+id_comentario int primary key,
+publicacion int,
+usuario_comentario int,
+comentario text
+
+);
+
+Create table APLICACION(
+id_proyecto int primary key,
+nombre_proyecto varchar(100),
+fecha_inicio date,
+fecha_fin date,
+precio numeric(12,2)
+
+);
+
+
+
+
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+
+Create table (
+
+
+);
+Alter table usuario add constraint fk1 foreign key (tipo_usuario) references TIPO_USUARIO(id_tipo);
